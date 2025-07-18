@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dashboard - Administrador</title>
+
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css" />
+    <link rel="stylesheet" href="../static/ESTILOS/Dashboard.css">
+</head>
+
+<body class="bg-light">
+
+
+    <header>
+        <nav class="navbar bg-body-tertiary fixed-top">
+    <div class="container-fluid d-flex justify-content-between align-items-center">
+
+     
+      <img src="../static/IMG/download-removebg-preview (1).png" alt="logo" class="logo" style="height: 50px;" />
+
+     
+      <a href="{{ url_for('auth.login') }}" class="btn btn-primary">
+         <i class="bi bi-box-arrow-right"></i> Cerrar sesión
+      </a>
+
+    </div>
+  </nav>
+    </header>
+
+
+    <div class="container text-center" style="margin-top: 100px;">
+        <h2 class="mb-4">Bienvenido, Administrador</h2>
+        <p class="text-muted">Seleccione una sección para gestionar la información del sistema.</p>
+
+        <div class="row justify-content-center mt-5 g-4">
+
+            <div class="col-md-4">
+                <a href="{{ url_for('routes.categorias') }}" class="btn btn-primary w-100 btn-dashboard">
+                  <i class="bi bi-bag"></i> Gestión Categorías
+                </a>
+
+            </div>
+
+            <div class="col-md-4">
+                <a href="{{ url_for('routes.tipos_habitacion') }}" class="btn btn-secondary w-100 btn-dashboard">
+                  <i class="bi bi-door-open-fill icon-menu"></i> Tipos de Habitación
+                </a>
+            </div>
+
+            <div class="col-md-4">
+                <a href="{{ url_for('routes.habitaciones') }}" class="btn btn-info w-100 text-white btn-dashboard">
+                  <i class="bi bi-building icon-menu"></i> Habitaciones
+                </a>
+            </div>
+
+        </div>
+    </div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
